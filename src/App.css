@@ -1,0 +1,396 @@
+html {
+  background-color: #060E18;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.696);
+  /* font-family: Inter; */
+  font-family: 'Lora', serif;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  height: 10vh;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 20px;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0px 37px;
+  transition: margin 2s;
+}
+
+nav ul li a {
+  font-family: 'Playfair Display', serif;
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: white;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #2F6BC5;
+}
+
+h1 {
+  color: #FFF;
+  font-family: Playfair Display;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 400;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+section {
+  background: linear-gradient(#000000, #00000000);
+  padding: 10px 200px;
+  min-height: 100vh;
+  margin-bottom: 100px;
+}
+
+section h2 {
+  font-family: 'Lora', serif;
+  color: white;
+  font-family: Lora;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+em {
+  color: #2F6BC5;
+}
+
+
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  margin-left: 98px;
+  margin-right: 10px;
+  color: #FFF;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+
+.profile-section {
+  display:flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials {
+  display: grid;
+  padding-right: 30px;
+  align-items: center;
+}
+
+.socials a {
+  color: white;
+  font-size: 1.5em;
+  margin-top: 40px;
+  margin-bottom: 15px
+}
+
+.profile-text {
+  display: grid;
+  color: white;
+  width: 530px;
+}
+
+.profile-photo {
+  height: 400px;
+  margin-right: 25%;
+}
+
+.profile-photo img {
+  width: 100%;
+  max-width: 320px;
+  min-width: 250px;
+  position: absolute;
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  height: 50px
+}
+
+.subtitle h2 {
+  color: #FFF;
+  font-family: Lora;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.name {
+  height: 180px;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.38);
+  font-family: Inter;
+  font-size: 1.2em;
+  width: 403px;
+}
+
+.dash {
+  width: 40px;
+  height: 8px;
+  flex-shrink: 0;
+  background: #D9D9D9;
+  margin-right: 20px;
+}
+
+.controls {
+  text-align: left;
+}
+
+.controls a {
+  display: inline-block;
+  background-color: #2F6BC5;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-right: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.email {
+  background-color: rgba(124, 124, 124, 0.447) !important;
+}
+
+/* ==== over mij pagina ===== */
+
+.personal-article {
+  display: grid;
+  align-items: center;
+}
+
+.wie {
+  grid-template-columns: 30% auto;
+  column-gap: 2em;
+}
+
+.wie img {
+  margin-top: 50px
+}
+
+
+.voorjou {
+  grid-template-columns: auto 30%;
+  column-gap: 2em;
+}
+
+.voorjou img{
+  margin-top: 33px;
+}
+
+.personal-article div {
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.personal-article div img {
+  width: 100%;
+}
+
+
+
+/* ====== Pagina prijzen ===== */
+
+.prijzen-section {
+  color: #decccc;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+#prices div h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.title-prices {
+  width: 500px !important;
+  text-align: left !important;
+}
+
+.title-section {
+  margin-left: 20px;
+}
+
+
+.prijzen-section div {
+  width: 240px;
+  height: 600px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 2px 15px rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  align-items: center;
+}
+
+.prijzen-section div h2 {
+  display: grid;
+  color: #ffffff;
+  border-radius: 100px;
+  width: 100px;
+  height: 70px !important;
+  text-align: center;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.prijzen-section div h1 {
+  font-size: 1.7em;
+  margin:0px;
+}
+
+.prijzen-section div h3 {
+  font-size: 1.7em;
+  margin:0px;
+}
+
+.prijzen-section div h4 {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0px;
+}
+
+.prijzen-section div ul {
+  text-align: left;
+  padding-left: 0;
+}
+
+.styled-list {
+  list-style: none; 
+}
+
+.styled-list li::before {
+  content: '☑️'; 
+  margin-right: 8px; 
+}
+
+
+
+/* ========= contact pagina ======= */
+
+#contact {
+  display: grid;
+  grid-template-columns: 50% auto;
+  align-items: center;
+  margin: 0px;
+}
+
+#contact h1 {
+  width: 500px;
+}
+
+#contact label {
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+#contact input,
+#contact textarea {
+  border-radius: 14px;
+  color: rgba(255, 255, 255, 0.696);
+  width: 100% !important;
+  padding: 10px;
+  background: none;
+  margin-bottom: 10px;
+  border: none;
+  box-shadow: 0 0 40px 2px #7ad0fe41;
+  font-size: 1em;
+  resize: none;
+}
+
+#contact button {
+  background: #7472de;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+
+#contact button:hover {
+  background: #5765c1;
+}
+
+#card {
+  background-image:
+    linear-gradient(black, black),
+    linear-gradient(calc(var(--rotation)), #ababab 0, #202020 20%, transparent 80%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  position: relative;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(100px);
+	}
+}
+
+svg #wheel {
+	animation: scroll ease 1.5s infinite;
+}
+
+.scroll {
+  z-index: 1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 50px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.scroll:hover {
+  box-shadow:
+    0 0 20px 1px #fff,  /* inner white */
+}
