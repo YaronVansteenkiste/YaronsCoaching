@@ -5,7 +5,7 @@ import photo3 from "../images/photo3.jpg";
 function about() {
   return (
     <section id='about'>
-      <div>
+      <div className='about-title'>
         <h2>Meet your coach</h2>
         <h1>Jouw weg naar een gezondere levensstijl</h1>
         <p>Zeg vaarwel tegen ongezonde gewoontes! Met mijn persoonlijke begeleiding in jouw workouts transformeer

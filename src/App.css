@@ -2,22 +2,27 @@ html {
   background-color: #060E18;
 }
 
-body::-webkit-scrollbar {
+html{scroll-behavior:smooth}
+
+/* body::-webkit-scrollbar {
   display: none;
+} */
+
+a, .scroll, button {
+  transition: all 1.3s ease;
 }
 
 p {
   font-size: 1.1em;
   color: rgba(255, 255, 255, 0.696);
-  /* font-family: Inter; */
   font-family: 'Lora', serif;
   text-align: justify;
-  text-justify: inter-word;
 }
 
 nav {
   display: grid;
-  grid-template-columns: auto auto auto;
+  justify-content: center;
+  grid-template-columns: 200px 852px;
   align-items: center;
   height: 10vh;
 }
@@ -32,7 +37,6 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin: 0px 37px;
-  transition: margin 2s;
 }
 
 nav ul li a {
@@ -43,7 +47,6 @@ nav ul li a {
   font-size: 1.3em;
   color: white;
   text-align: center;
-  transition: color 0.3s;
 }
 
 nav ul li a:hover {
@@ -73,6 +76,7 @@ section {
   padding: 10px 200px;
   min-height: 100vh;
   margin-bottom: 100px;
+  margin: auto;
 }
 
 section h2 {
@@ -90,11 +94,25 @@ em {
 }
 
 
+.hamburger {
+  display: none; /* Initially hide the hamburger icon on larger screens */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+
+/* === Home Page === */
 
 .logo {
   font-family: 'Playfair Display', serif;
-  margin-left: 98px;
-  margin-right: 10px;
+  margin-left: 50px;
   color: #FFF;
   font-size: 2em;
   font-style: normal;
@@ -105,34 +123,53 @@ em {
 
 
 .profile-section {
-  display:flex;
+  display:grid;
+  grid-template-columns: 48px 561px 191px;
   height: 90vh;
+  width: 1000px;
+  margin: auto;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
 .socials {
   display: grid;
-  padding-right: 30px;
-  align-items: center;
+  height: 200px;
 }
 
-.socials a {
+.socials-horizontal {
+  display: none;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 100px;
+  /* width: 403px; */
+  height: 50px;
+}
+
+.socials a, .socials-horizontal a{
   color: white;
   font-size: 1.5em;
-  margin-top: 40px;
-  margin-bottom: 15px
+  /* margin-top: 40px; */
+  margin-bottom: 15px;
+  width: 28px;
+  text-align: center;
+}
+
+.socials a:hover, 
+.socials-horizontal a:hover{
+  color: #2F6BC5;
+  transform: translateY(-5px);
 }
 
 .profile-text {
   display: grid;
   color: white;
-  width: 530px;
+  width: 450px;
 }
 
 .profile-photo {
+  display: grid;
   height: 400px;
-  margin-right: 25%;
 }
 
 .profile-photo img {
@@ -145,7 +182,8 @@ em {
 .subtitle {
   display: inline-flex;
   align-items: center;
-  height: 50px
+  height: 50px;
+  /* width: 403px; */
 }
 
 .subtitle h2 {
@@ -157,13 +195,14 @@ em {
 
 .name {
   height: 180px;
+  /* width: 403px; */
 }
 
 .description {
   color: rgba(255, 255, 255, 0.38);
   font-family: Inter;
   font-size: 1.2em;
-  width: 403px;
+  /* width: 403px; */
 }
 
 .dash {
@@ -174,19 +213,35 @@ em {
   margin-right: 20px;
 }
 
-.controls {
-  text-align: left;
+.controls { 
+  display: flex;
+  justify-content: space-around;
+  /* width: 403px; */
 }
 
-.controls a {
+
+.controls a, 
+#contact button{
   display: inline-block;
   background-color: #2F6BC5;
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 25px;
-  margin-right: 10px;
+  padding: 21px 21px;
+  border-radius: 30px;
   text-decoration: none;
-  text-transform: uppercase;
+}
+
+#contact button {
+  border-style: solid;
+  border:none;
+  /* width: 100px; */
+  cursor: pointer;
+}
+
+.controls a:hover, 
+#contact button:hover{
+  background: transparent !important;
+  border: 1px solid white;
+  transform: translateY(-5px);
 }
 
 .email {
@@ -195,14 +250,28 @@ em {
 
 /* ==== over mij pagina ===== */
 
+.about-title {
+  display: grid;
+  justify-content: center;
+}
+
+.about-title h2, 
+.about-title h1, 
+.about-title p {
+  width: 680px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
 .personal-article {
   display: grid;
   align-items: center;
 }
 
 .wie {
-  grid-template-columns: 30% auto;
+  grid-template-columns: 220px 420px;
   column-gap: 2em;
+  justify-content: center;
 }
 
 .wie img {
@@ -211,8 +280,10 @@ em {
 
 
 .voorjou {
-  grid-template-columns: auto 30%;
+  grid-template-columns: 434px 210px;
   column-gap: 2em;
+  justify-content: center;
+
 }
 
 .voorjou img{
@@ -220,12 +291,12 @@ em {
 }
 
 .personal-article div {
-  margin-left: 10px;
   margin-top: 40px;
 }
 
 .personal-article div img {
   width: 100%;
+  border-radius: 20px;
 }
 
 
@@ -236,33 +307,37 @@ em {
   color: #decccc;
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 20px;
-  justify-content: space-around;
+  gap: 30px;
+  justify-content: center;
 }
 
-#prices div h1 {
+.prijzen-section div h1 {
   width: 100%;
   text-align: center;
 }
 
-.title-prices {
-  width: 500px !important;
-  text-align: left !important;
+.title-section {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.title-section {
-  margin-left: 20px;
+
+.title-section h2,
+.title-section h1 {
+  width: 680px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 
 .prijzen-section div {
-  width: 240px;
-  height: 600px;
+  width: 250px;
+  height: 540px;
   border: 2px solid transparent;
   border-radius: 20px;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 2px 15px rgba(255, 255, 255, 0.1);
   padding: 20px;
-  align-items: center;
 }
 
 .prijzen-section div h2 {
@@ -312,20 +387,15 @@ em {
 
 #contact {
   display: grid;
-  grid-template-columns: 50% auto;
+  grid-template-columns: 400px 280px;
   align-items: center;
+  justify-content: center;
   margin: 0px;
-}
-
-#contact h1 {
-  width: 500px;
 }
 
 #contact label {
   color: white;
-  display: block;
   font-size: 1.2em;
-  margin-bottom: 5px;
 }
 
 #contact input,
@@ -333,29 +403,13 @@ em {
   border-radius: 14px;
   color: rgba(255, 255, 255, 0.696);
   width: 100% !important;
-  padding: 10px;
+  padding: 10px 0px;
   background: none;
   margin-bottom: 10px;
   border: none;
   box-shadow: 0 0 40px 2px #7ad0fe41;
   font-size: 1em;
   resize: none;
-}
-
-#contact button {
-  background: #7472de;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-
-#contact button:hover {
-  background: #5765c1;
 }
 
 #card {
@@ -391,6 +445,205 @@ svg #wheel {
 }
 
 .scroll:hover {
-  box-shadow:
-    0 0 20px 1px #fff,  /* inner white */
+  transform: translateY(-20%);
+}
+
+
+@media only screen and (max-width: 1070px) {
+  .profile-section {
+    display:grid;
+    padding-left: 20px;
+    grid-template-columns: auto auto;
+    width: 90%;
+    gap: 3%;
+    margin-bottom: 50px;
+  }
+
+  .profile-section img {
+    max-width: 10%;
+  }  
+
+  .profile-text {
+    width: 30em;
+  }
+
+  .prijzen-section {
+    gap: 10px;
+  }
+
+  .prijzen-section div {
+    width: 200px;
+  }
+
+
+  .name {
+    font-size: 1em;
+  }
+
+
+  .socials {
+    display: none;
+  }
+
+  .socials-horizontal {
+    display: grid;
+  }
+
+  nav {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .hamburger {
+    display: flex; 
+    position: absolute;
+    float: right;
+    right: 0;
+    margin-right: 20px;
+  }
+  
+  .logo {
+    display: none;
+  }
+
+  nav ul {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    float: right;
+    top: 60px;
+    right: 0;
+    background: #00000058; 
+    backdrop-filter: blur(4px);
+  }
+
+  ul.active {
+    display: grid; 
+  }
+}
+
+@media only screen and (max-width: 788px) {
+  section {
+    margin-bottom: 100px;
+  }
+
+
+  nav ul{
+    display: none; 
+  }
+
+
+  section {
+    display: block;
+    padding: 20px 5px !important;
+  }
+
+  .hamburger {
+    display: flex; 
+    position: absolute;
+    float: right;
+    right: 0;
+    margin-right: 20px;
+  }
+  
+  .logo {
+    display: none;
+  }
+
+  nav ul {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    float: right;
+    top: 60px;
+    right: 0;
+    background: #00000058; 
+    backdrop-filter: blur(4px);
+  }
+
+  ul.active {
+    display: grid; 
+  }
+
+
+  .scroll {
+    display: none;
+  }
+
+  #contact input,
+  #contact textarea {
+    font-size: 1em; 
+    padding: 10px 0; 
+  }
+
+  .profile-section {
+    display: block; 
+    height: 120vh;
+  }
+
+  .profile-photo img {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+
+
+  .profile-text {
+    width: 100%; 
+  }
+
+  .prijzen-section {
+    display: block;
+  }
+
+  .prijzen-section div {
+    margin-top: 20px;
+    width: auto;
+  }
+
+  .name {
+    font-size: 0.9em;
+  }
+  .subtitle h2{
+    font-size: 1.6em;
+  }
+
+  .about-title {
+    display: block
+  }
+
+  .about-title h2, 
+  .about-title h1, 
+  .about-title p {
+  width: auto;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.personal-article {
+  display: block;
+  text-align: center;
+
+}
+
+#about img {
+  width: 50%;
+}
+
+.wie {
+  display: block;
+}
+
+.title-section h2, .title-section h1 {
+  width: auto;
+}
+
+#contact {
+  display: block;
+  padding: 20px !important;
+}
+
 }

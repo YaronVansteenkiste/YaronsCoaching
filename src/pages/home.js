@@ -54,9 +54,17 @@ function Home() {
                          Jouw succes is mijn missie!
                     </p>
                 </div>
+                <div className="socials-horizontal">
+                <a href="https://www.instagram.com/yaronvsk/"
+                    target="_blank" rel="noreferrer"><FaInstagram /></a>
+                <a href="https://linkedin.com/in/yaron-vansteenkiste/"
+                    target="_blank" rel="noreferrer"><FaDiscord /></a>
+                <a href="https://github.com/YaronVansteenkiste"
+                    target="_blank" rel="noreferrer"><FaLinkedin /></a>
+            </div>
                 <div className="controls">
-                    <a href='#contact'>Contacteer mij</a>
-                    <a href='#contact' className='email'>of stuur mij een mail</a>
+                    <a href='#contact'>CONTACTEER MIJ</a>
+                    <a href='#contact' className='email'>Of stuur mij een mail.</a>
                 </div>
             </div>
             <div className="profile-photo">
