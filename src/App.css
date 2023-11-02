@@ -4,9 +4,9 @@ html {
 
 html{scroll-behavior:smooth}
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
-} */
+}
 
 a, .scroll, button {
   transition: all 1.3s ease;
