@@ -1,8 +1,8 @@
 {
   "name": "yaronscoaching",
   "version": "0.1.0",
-  "homepage": "https://yaronvansteenkiste.github.io/YaronsCoaching",
-  "private": true,
+  "homepage": "https://yaronvansteenkiste.github.io/YaronsCoaching/",
+  "private": false,
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.17.0",
