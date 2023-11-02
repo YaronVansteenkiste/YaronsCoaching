@@ -21,6 +21,10 @@ function redirectToAnchorLink() {
   if (path === '/about' || path === '/prices' || path === '/contact') {
     window.location = "/#"+path.replace('/', '');
   } 
+
+  if (path === '/YaronsCoaching') {
+    window.location = "/"
+  }
 }
 redirectToAnchorLink();
 
