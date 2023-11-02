@@ -557,6 +557,10 @@ svg #wheel {
     display: none;
   }
 
+  .controls a {
+    font-size: 3vw !important;
+  }
+
 
   .scroll {
     display: none;
