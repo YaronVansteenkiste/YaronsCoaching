@@ -16,7 +16,7 @@ const basename = '/YaronsCoaching';
 const router = createBrowserRouter([
   {path: "/",element: <App/>},
 
-], { basename })
+])
 
 function redirectToAnchorLink() {
   const path = window.location.pathname;
