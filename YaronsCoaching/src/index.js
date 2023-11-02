@@ -11,8 +11,6 @@ import {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const basename = '/YaronsCoaching';
-
 const router = createBrowserRouter([
   {path: "/",element: <App/>},
 

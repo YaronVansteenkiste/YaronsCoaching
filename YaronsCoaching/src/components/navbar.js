@@ -20,22 +20,22 @@ function Navbar() {
       </span>
       <ul className={isMenuOpen ? 'active' : ''}>
         <li>
-          <HashLink smooth to="/#home">
+          <HashLink smooth to="/#home" onClick={handleMenuToggle}>
             Home
           </HashLink>
         </li>
         <li>
-          <HashLink smooth to="/#about">
+          <HashLink smooth to="/#about" onClick={handleMenuToggle}>
             Over mij
           </HashLink>
         </li>
         <li>
-          <HashLink smooth to="/#prices">
+          <HashLink smooth to="/#prices" onClick={handleMenuToggle}>
             Prijzen
           </HashLink>
         </li>
         <li>
-          <HashLink smooth to="/#contact">
+          <HashLink smooth to="/#contact" onClick={handleMenuToggle}>
             Contact
           </HashLink>
         </li>

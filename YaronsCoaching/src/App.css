@@ -105,6 +105,7 @@ em {
   height: 3px;
   background-color: white;
   margin: 3px 0;
+  transition: all 0.2s;
 }
 
 
@@ -215,8 +216,11 @@ em {
 
 .controls { 
   display: flex;
-  justify-content: space-around;
-  /* width: 403px; */
+  justify-content: center;
+}
+
+.controls a {
+  margin: 0px 5px;
 }
 
 
@@ -453,18 +457,17 @@ svg #wheel {
   .profile-section {
     display:grid;
     padding-left: 20px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 60% 40%;
     width: 90%;
-    gap: 3%;
     margin-bottom: 50px;
   }
 
-  .profile-section img {
-    max-width: 10%;
-  }  
+  .profile-photo img {
+    z-index: -1;
+  }
 
   .profile-text {
-    width: 30em;
+    width: 90%;
   }
 
   .prijzen-section {
@@ -496,8 +499,9 @@ svg #wheel {
 
 @media only screen and (max-width: 830px) {
   .hamburger {
+    z-index: 2;
     display: flex; 
-    position: absolute;
+    position: fixed;
     float: right;
     right: 0;
     margin-right: 20px;
@@ -507,20 +511,35 @@ svg #wheel {
     display: none;
   }
 
+
   nav ul {
-    display: none; 
-    flex-direction: column;
-    position: absolute;
-    float: right;
-    top: 60px;
+    margin: 0px;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+    width: 0px; 
+    z-index: 1;
+    padding-top: 60px;
+    height: calc(100vh - 60px);
+    top: 0;
     right: 0;
-    background: #00000058; 
-    backdrop-filter: blur(4px);
+    background-color: #111111;
+    transition: 0.5s;
+    overflow-x: hidden;
+  }
+
+  nav ul li {
+    margin: 20px 0px;
+    width: 100%;
+    box-shadow: white 1px 1px;
   }
 
   ul.active {
-    display: grid; 
+    width: 100%;
+    transition: 0.5s;
+
   }
+
 }
 
 @media only screen and (max-width: 788px) {
@@ -528,42 +547,14 @@ svg #wheel {
     margin-bottom: 100px;
   }
 
-
-  nav ul{
-    display: none; 
-  }
-
-
   section {
     display: block;
-    padding: 20px 5px !important;
+    padding: 20px 15px !important;
   }
 
-  .hamburger {
-    display: flex; 
-    position: absolute;
-    float: right;
-    right: 0;
-    margin-right: 20px;
-  }
   
   .logo {
     display: none;
-  }
-
-  nav ul {
-    display: none; 
-    flex-direction: column;
-    position: absolute;
-    float: right;
-    top: 60px;
-    right: 0;
-    background: #00000058; 
-    backdrop-filter: blur(4px);
-  }
-
-  ul.active {
-    display: grid; 
   }
 
 
@@ -602,13 +593,6 @@ svg #wheel {
   .prijzen-section div {
     margin-top: 20px;
     width: auto;
-  }
-
-  .name {
-    font-size: 0.9em;
-  }
-  .subtitle h2{
-    font-size: 1.6em;
   }
 
   .about-title {
