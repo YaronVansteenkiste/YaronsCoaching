@@ -95,7 +95,7 @@ em {
 
 
 .hamburger {
-  display: none; /* Initially hide the hamburger icon on larger screens */
+  display: none; 
   flex-direction: column;
   cursor: pointer;
 }
@@ -125,7 +125,9 @@ em {
 
 .profile-section {
   display:grid;
-  grid-template-columns: 48px 561px 191px;
+  /* grid-template-columns: 48px 561px 191px; */
+  grid-template-columns: 45px 638px 299px;
+
   height: 90vh;
   width: 1000px;
   margin: auto;
@@ -165,7 +167,7 @@ em {
 .profile-text {
   display: grid;
   color: white;
-  width: 450px;
+  width: 573px;
 }
 
 .profile-photo {
@@ -175,7 +177,7 @@ em {
 
 .profile-photo img {
   width: 100%;
-  max-width: 320px;
+  max-width: 400px;
   min-width: 250px;
   position: absolute;
 }
@@ -196,14 +198,12 @@ em {
 
 .name {
   height: 180px;
-  /* width: 403px; */
 }
 
 .description {
   color: rgba(255, 255, 255, 0.38);
   font-family: Inter;
   font-size: 1.2em;
-  /* width: 403px; */
 }
 
 .dash {
