@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/YaronsCoaching/static/css/main.a06aeef3.css",
-    "main.js": "/YaronsCoaching/static/js/main.65cfc19c.js",
+    "main.css": "/YaronsCoaching/static/css/main.51cf8d39.css",
+    "main.js": "/YaronsCoaching/static/js/main.66b930e8.js",
     "static/media/photo4.png": "/YaronsCoaching/static/media/photo4.3d262badf0e59b8dd2ac.png",
     "static/media/photo5.png": "/YaronsCoaching/static/media/photo5.e23cce3709d877428d13.png",
     "static/media/photo1.png": "/YaronsCoaching/static/media/photo1.93e62884c84103f32b49.png",
@@ -9,11 +9,11 @@
     "static/media/photo3.jpg": "/YaronsCoaching/static/media/photo3.71b68c7a7864b48dfd54.jpg",
     "static/media/smoke.png": "/YaronsCoaching/static/media/smoke.7c256a053bfa962dead9.png",
     "index.html": "/YaronsCoaching/index.html",
-    "main.a06aeef3.css.map": "/YaronsCoaching/static/css/main.a06aeef3.css.map",
-    "main.65cfc19c.js.map": "/YaronsCoaching/static/js/main.65cfc19c.js.map"
+    "main.51cf8d39.css.map": "/YaronsCoaching/static/css/main.51cf8d39.css.map",
+    "main.66b930e8.js.map": "/YaronsCoaching/static/js/main.66b930e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.a06aeef3.css",
-    "static/js/main.65cfc19c.js"
+    "static/css/main.51cf8d39.css",
+    "static/js/main.66b930e8.js"
   ]
 }
