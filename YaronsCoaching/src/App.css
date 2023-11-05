@@ -112,7 +112,7 @@ em {
 
 .logo {
   font-family: 'Playfair Display', serif;
-  margin-left: 50px;
+  margin-left: 23px;
   color: #FFF;
   font-size: 2em;
   font-style: normal;
@@ -124,9 +124,7 @@ em {
 
 .profile-section {
   display:grid;
-  /* grid-template-columns: 48px 561px 191px; */
   grid-template-columns: 45px 638px 299px;
-
   height: 90vh;
   width: 1000px;
   margin: auto;
@@ -144,14 +142,12 @@ em {
   grid-template-columns: auto auto auto;
   justify-content: center;
   gap: 100px;
-  /* width: 403px; */
   height: 50px;
 }
 
 .socials a, .socials-horizontal a{
   color: white;
   font-size: 1.5em;
-  /* margin-top: 40px; */
   margin-bottom: 15px;
   width: 28px;
   text-align: center;
@@ -460,6 +456,9 @@ svg #wheel {
     width: 90%;
   }
 
+  .logo {
+    margin-left: 0px;
+  }
  
 
   .profile-text {
@@ -493,6 +492,10 @@ svg #wheel {
     height: 90% !important;
   }
 
+  .logo {
+    display: none;
+  }
+
   nav {
     display: flex;
   }
@@ -524,7 +527,7 @@ svg #wheel {
     height: calc(100vh - 60px);
     top: 0;
     right: 0;
-    background-color: #111111;
+    background-color: #0C1A2B;
     transition: 0.5s;
     overflow-x: hidden;
   }
@@ -557,9 +560,7 @@ svg #wheel {
   }
 
   
-  .logo {
-    display: none;
-  }
+
 
   .controls a {
     font-size: 3vw !important;
