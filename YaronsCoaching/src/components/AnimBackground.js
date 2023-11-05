@@ -13,13 +13,6 @@ function AnimBackground() {
     camera.rotation.y = -0.12;
     camera.rotation.z = 0.27;
 
-    window.addEventListener('mousemove', onMouseMove, false);
-
-    function onMouseMove(event) {
-      scene.position.x = (event.clientX - window.innerWidth * 0.5) * 0.03;
-      scene.position.z = (event.clientY - window.innerHeight * -0.5) * -0.03;
-    }
-
     const light = new THREE.AmbientLight(0x4477B0);
     scene.add(light);
 
@@ -70,9 +63,22 @@ function AnimBackground() {
       animate();
     });
 
-    return () => {
-      window.removeEventListener('mousemove', onMouseMove);
-    };
+    const isMobile = window.innerWidth <= 830; 
+
+    if (!isMobile) {
+      function onMouseMove(event) {
+        scene.position.x = (event.clientX - window.innerWidth * 0.5) * 0.03;
+        scene.position.z = (event.clientY - window.innerHeight * -0.5) * -0.03;
+      }
+
+      window.addEventListener('mousemove', onMouseMove, false);
+
+      return () => {
+        window.removeEventListener('mousemove', onMouseMove);
+      };
+    }
+
+    return undefined;
   }, []);
 
   return <div id='background'></div>;

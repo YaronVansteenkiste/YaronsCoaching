@@ -1,23 +1,19 @@
 import React, { useState } from 'react';
 
 function Contact() {
-  // Define state for form fields
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
 
-  // Handle form input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can handle form submission logic here, e.g., sending data to a server
     console.log(formData);
   };
 
@@ -35,6 +31,7 @@ function Contact() {
               type="text"
               id="name"
               name="name"
+              placeholder="Jouw naam"
               value={formData.name}
               onChange={handleInputChange}
               required
@@ -46,7 +43,20 @@ function Contact() {
               type="email"
               id="email"
               name="email"
+              placeholder='jouwemail@email.com'
               value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="subject">Onderwerp</label>
+            <input
+              type="subject"
+              id="subject"
+              name="subject"
+              placeholder='Onderwerp'
+              value={formData.subject}
               onChange={handleInputChange}
               required
             />
@@ -57,6 +67,7 @@ function Contact() {
               id="message"
               name="message"
               value={formData.message}
+              placeholder='Jouw Boodschap'
               onChange={handleInputChange}
               required
               rows="20"
