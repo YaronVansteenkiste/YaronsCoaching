@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import EMAIL_CONFIG from '../config';
 
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    subject: '',
     message: '',
   });
 
@@ -14,11 +17,18 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    emailjs.sendForm(EMAIL_CONFIG.serviceId, EMAIL_CONFIG.templateId, e.target, EMAIL_CONFIG.userId)
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+      })
+      .catch((error) => {
+        console.error('Email error:', error);
+      });
   };
 
   return (
-    <section id='contact'>
+    <section id="contact">
       <div>
         <h1>Stuur mij een berichtje.</h1>
         <h2>Jouw eerste stap naar verandering</h2>
@@ -43,7 +53,7 @@ function Contact() {
               type="email"
               id="email"
               name="email"
-              placeholder='jouwemail@email.com'
+              placeholder="jouwemail@email.com"
               value={formData.email}
               onChange={handleInputChange}
               required
@@ -52,10 +62,10 @@ function Contact() {
           <div>
             <label htmlFor="subject">Onderwerp</label>
             <input
-              type="subject"
+              type="text"
               id="subject"
               name="subject"
-              placeholder='Onderwerp'
+              placeholder="Onderwerp"
               value={formData.subject}
               onChange={handleInputChange}
               required
@@ -67,10 +77,10 @@ function Contact() {
               id="message"
               name="message"
               value={formData.message}
-              placeholder='Jouw Boodschap'
+              placeholder="Jouw Boodschap"
               onChange={handleInputChange}
               required
-              rows="20"
+              rows="6"
             />
           </div>
           <div>

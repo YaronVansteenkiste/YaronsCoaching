@@ -23,7 +23,7 @@ function Home() {
         };
 
         animateText();
-    }, []); // This useEffect will run only once when the component mounts
+    }, []); 
 
     useEffect(() => {
         const interval = setInterval(() => {
