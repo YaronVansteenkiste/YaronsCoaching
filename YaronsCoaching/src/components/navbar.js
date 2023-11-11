@@ -39,6 +39,15 @@ function Navbar() {
             Contact
           </HashLink>
         </li>
+        <li>
+          <div className="dropdown">
+            <h4>Account</h4>
+            <div className='dropdown-content'>
+              <a href="./YaronsCoaching/login">Login</a>
+              <a href="./YaronsCoaching/register">Register</a>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
   );

@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react';
+import { FaCheck } from 'react-icons/fa';
 
 function Prices() {
+  const [selectedPlan, setSelectedPlan] = useState(null);
+
   useEffect(() => {
     const card = document.getElementById("card");
 
@@ -12,8 +15,12 @@ function Prices() {
       const angle = Math.atan2(-x, y);
       card.style.setProperty("--rotation", angle + "rad");
     });
+  }, []);
 
-  })
+  const handlePlanSelect = (plan) => {
+    setSelectedPlan(plan);
+  }
+
   return (
     <section id='prices'>
       <div className='title-section'>
@@ -21,51 +28,76 @@ function Prices() {
         <h1 className='title-prices'>Betaalbare Prijzen voor Jouw Fitness Succes</h1>
       </div>
       <div className='prijzen-section'>
-        <div>
-          <h1>📈</h1>
-          <h4>Digital Fitness Pakket</h4>
-          <h2>€15</h2>
-          <h5>/per week</h5>
-          <p>Inbegrepen:</p>
-          <ul className="styled-list">
-            <li>Wekelijkse Privé Zoom-sessies voor Persoonlijke Begeleiding</li>
-            <li>Op maat gemaakt Trainingsplan</li>
-            <li>Voortgangscontrole en Aanmoediging voor Wekelijkse Workouts</li>
-            <li>E-mailondersteuning</li>
-          </ul>
+        <div className='prijzen-card'>
+          <div className='prijzen-card-title'>
+            <h1>📈</h1>
+            <h4>Digital Fitness Pakket</h4>
+          </div>
+          <div className='prijzen-card-price'>
+            <h2>€10</h2>
+            <h5>/per uur</h5>
+          </div>
+          <div className='prijzen-card-included'>
+            <p>Inbegrepen:</p>
+            <ul className="styled-list">
+              <li><FaCheck /> Wekelijkse Zoom-sessie van 1 uur.</li>
+              <li><FaCheck /> Toegang tot een online portal met aanvullende bronnen en opdrachten.</li>
+              <li><FaCheck /> Beperkte e-mailondersteuning tussen de sessies door (maximaal 2 e-mails per week).</li>
+              <li><FaCheck /> Facturering op uurbasis met flexibele planning.</li>
+            </ul>
+          </div>
+          <div className='prijzen-card-btn'>
+            <button onClick={() => handlePlanSelect('Digital')}> Inschrijven</button>
+          </div>
         </div>
-        <div id='card'>
-          <h1>💪</h1>
-          <h4>Optimal Growth Pakket</h4>
-          <h2><b></b>€25</h2>
-          <h5>/per week</h5>
-          <p>Inbegrepen:</p>
-          <ul className="styled-list">
-            <li>Wekelijkse Persoonlijke Coaching met Reguliere Ondersteuning</li>
-            <li>Gepersonaliseerd Trainingsplan</li>
-            <li>Basis Voedingsadvies</li>
-            <li>Wekelijkse Voortgangscontrole</li>
-            <li>E-mail- en Telefoonsupport</li>
-            <li>Accountability om Je Op de Rails te Houden</li>
-          </ul>
+        <div className='prijzen-card' id='card'>
+          <div className='prijzen-card-title'>
+            <h1>💪</h1>
+            <h4>Optimal Growth Pakket</h4>
+          </div>
+          <div className='prijzen-card-price'>
+            <h2><b></b>€25</h2>
+            <h5>/per uur</h5>
+          </div>
+          <div className='prijzen-card-included'>
+            <p>Inbegrepen:</p>
+            <ul className="styled-list">
+              <li><FaCheck /> Wekelijkse persoonlijke begeleidingssessies met een flexibele duur van maximaal 2 uur.</li>
+              <li><FaCheck /> Gepersonaliseerd Trainingsplan</li>
+              <li><FaCheck /> Onbeperkte e-mailondersteuning met gegarandeerde reactie binnen 24 uur.</li>
+              <li><FaCheck /> Individueel afgestemd trainingsprogramma en voortgangsrapportage.</li>
+              <li><FaCheck /> Facturering op uurbasis met flexibele planning.</li>
+            </ul>
+          </div>
+          <div className='prijzen-card-btn'>
+            <button className='important-btn' onClick={() => handlePlanSelect('Growth')}> Inschrijven</button>
+          </div>
         </div>
-        <div>
-          <h1>🚀</h1>
-          <h4>Ultimate Success Pakket</h4>
-          <h2>€45</h2>
-          <h5>/per week</h5>
-          <p>Inbegrepen:</p>
-          <ul className="styled-list">
-            <li>Dagelijkse Persoonlijke Coaching met 24/7 Ondersteuning</li>
-            <li>Volledig Gepersonaliseerd Trainingsplan met Continue Optimalisatie</li>
-            <li>Diepgaande Voedingsanalyse en Aanbevelingen</li>
-            <li>Toegang tot Exclusieve Hulpmiddelen voor Maximale Resultaten</li>
-            <li>Prioritaire Klantenondersteuning</li>
-          </ul>
+        <div className='prijzen-card'>
+          <div className='prijzen-card-title'>
+            <h1>🚀</h1>
+            <h4>Ultimate Success Pakket</h4>
+          </div>
+          <div className='prijzen-card-price'>
+            <h2>€35</h2>
+            <h5>/per uur</h5>
+          </div>
+          <div className='prijzen-card-included'>
+            <p>Inbegrepen:</p>
+            <ul className="styled-list">
+              <li><FaCheck /> Twee wekelijkse persoonlijke begeleidingssessies van 1,5 uur per sessie.</li>
+              <li><FaCheck /> Volledig Gepersonaliseerd Trainingsplan met Continue Optimalisatie.</li>
+              <li><FaCheck /> Maandelijkse voortgangsrapporten en aanpassing van doelen.</li>
+              <li><FaCheck /> Facturering op kwartaalbasis met extra voordelen zoals gratis proteine shakes.</li>
+            </ul>
+          </div>
+          <div className='prijzen-card-btn'>
+            <button onClick={() => handlePlanSelect('Success')}> Inschrijven</button>
+          </div>
         </div>
       </div>
     </section>
   )
 }
 
-export default Prices
+export default Prices;

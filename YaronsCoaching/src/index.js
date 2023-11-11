@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Login from './pages/login';
+import Register from './pages/register';
 
 import {
   createBrowserRouter,
@@ -15,8 +17,12 @@ const basename = '/YaronsCoaching';
 
 const router = createBrowserRouter([
   {path: "/",element: <App/>},
+  {path: "/login",element: <Login/>},
+  {path: "/register", element: <Register/>},
 
 ], {basename})
+
+
 
 function redirectToAnchorLink() {
   const path = window.location.pathname;

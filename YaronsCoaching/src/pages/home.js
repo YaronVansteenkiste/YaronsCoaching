@@ -77,8 +77,8 @@ function Home() {
                         target="_blank" rel="noreferrer"><FaLinkedin /></a>
                 </div>
                 <div className="controls text-to-reveal">
-                    <a href='#contact'>CONTACTEER MIJ</a>
-                    <a href='#contact' className='email'>Of stuur mij een mail.</a>
+                    <a href='#prices'>BEKIJK TARIEVEN</a>
+                    <a href='#contact' className='email'>Of contacteer mij een mail.</a>
                 </div>
             </div>
             <div className="profile-photo text-to-reveal">
